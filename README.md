@@ -9,7 +9,7 @@ This repository contains a simple script in Python language. The Python file (.p
 
 2. For convenience purposes, the user can also insert an ORF (or part of an ORF) that contains translatable codons. If the user inserts an ORF instead of a protein sequence they will be asked to confirm that their sequence is indeed an ORF. Upon confirmation, the ORF will be translated to protein (the provided codons will be translated to aminoacids in one-letter code). If the user doesn't confirm that the inserted sequence is an ORF, they will be asked again to provide a protein sequence written in one-letter code.
 
-3. The protein sequence will be checked for typing errors. If the user has inserted by mistake a letter that doesn't correspond to an aminoacid they will be notified and the program will stop running. 
+3. The protein sequence or the ORF to be translated, will be checked for typing errors. If the user has inserted by mistake a letter that doesn't correspond to an aminoacid they will be notified and asked to insert their sequence correctly. 
 
 4. If there are no typing mistakes in the inserted protein, then the sequence of aminoacids will be scanned in order to detect hydrophobic aminoacids. The user will be notified on the position of the hydrophobic aminoacid and the remaining sequence. 
 
