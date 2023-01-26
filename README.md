@@ -1,9 +1,9 @@
 # Python_scripts-Hydrophobic_domain_finder
 
 
-Hydrophobic domain finder in Python
+Transmembrane domain finder in Python
 
-This repository contains a simple script in Python language. The Python file (.py) contains the necessary code for detecting transmembrane domains in a protein. Since most transmembrane domains of a protein are hydrophobic, the detection of those domains in this script is based on the detection of hydrophobic aminoacids. The steps of the script are the following:
+This repository contains a simple script in Python language. The script contains the necessary code for detecting transmembrane domains in a protein. Since most transmembrane domains of a protein are hydrophobic, the detection of those domains in this script is based on the detection of hydrophobic aminoacids. The steps of the script are the following:
 
 1. The user is asked to provide a protein sequence written in one-letter code.
 
@@ -19,5 +19,6 @@ This repository contains a simple script in Python language. The Python file (.p
 
 7. Once the detection of a domain / region is done, the program continues scanning the rest of the sequence in order to detect more potential hydrophobic domains (see steps 4-6). The user is notified once scanning of the whole sequence is done.
 
-REFERENCE
+
+The properties and size in aminoacids of a transmembrane domain were found in the following reference:
 R.R.Wayne Wayne Albers, George J. Siegel, in Basic Neurochemistry (Eighth Edition), 2012
