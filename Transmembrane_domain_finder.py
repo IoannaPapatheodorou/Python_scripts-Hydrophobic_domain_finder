@@ -20,10 +20,11 @@ def domain_quality_control(final_sequence):
 def DOMAIN_finder(protein):
     print("Proceeding to search for domains in protein: ", protein)
 
+    #Transmembrane domains are largely hydrophobic. Please refer to the README file for the respective reference.
     domain_seq = hydro_domain_start(protein)
     
     if domain_seq == "None":
-        print("Your protein doesn't contain hydrophobic domains. Scanning of DNA sequence is done!")
+        print("No hydrophobic residues found. Scanning of DNA sequence is done!")
         return
     
     final_sequence, remaining_sequence = hydro_domain_end(domain_seq)
