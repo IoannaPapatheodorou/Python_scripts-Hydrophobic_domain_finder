@@ -3,7 +3,7 @@
 
 Hydrophobic domain finder in Python
 
-This repository contains a simple script in Python language. The Python file (.py) contains the necessary code for detecting hydrophobic domains in a protein. The steps of the script are the following:
+This repository contains a simple script in Python language. The Python file (.py) contains the necessary code for detecting transmembrane domains in a protein. Since most transmembrane domains of a protein are hydrophobic, the detection of those domains in this script is based on the detection of hydrophobic aminoacids. The steps of the script are the following:
 
 1. The user is asked to provide a protein sequence written in one-letter code.
 
@@ -18,3 +18,6 @@ This repository contains a simple script in Python language. The Python file (.p
 6. The potential hydropobic domain goes through a step of "quality control" to make sure that its length is appropriate. If there are no more than 3 consective hydrophobic aminoacids then the length is considered too small and the region is not taken as a hydrophobic domain. If there are more than 3 consecutive hydrophobic aminoacids then the region is considered as a hydropbohic domain. The user is notified about the result of the "quality control". 
 
 7. Once the detection of a domain / region is done, the program continues scanning the rest of the sequence in order to detect more potential hydrophobic domains (see steps 4-6). The user is notified once scanning of the whole sequence is done.
+
+REFERENCE
+R.R.Wayne Wayne Albers, George J. Siegel, in Basic Neurochemistry (Eighth Edition), 2012
