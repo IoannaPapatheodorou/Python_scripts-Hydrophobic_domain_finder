@@ -2,6 +2,7 @@
 aminoacids = ["G", "P", "A", "V", "L", "I", "M", "C", "F", "Y", "W", "H", "K", "R", "Q", "N", "E", "D", "S", "T"]
 hydrophobics = ["A", "V", "L", "I", "P", "F", "C"]
 non_hydrophobics = ["G", "M", "Y", "W", "H", "K", "R", "Q", "N", "E", "D", "S", "T"]
+type_errors = ["B", "J", "O", "U", "X", "Z"]
 
 
 #Checking if the retrieved sequence could be indeed a hydrophobic domain
@@ -73,11 +74,31 @@ def hydro_domain_end(domain_seq):
 
 #translating an ORF to protein
 def translator(sequence):
-    protein = sequence.replace("ATA", "I").replace("ATC", "I").replace("ATT", "I").replace("ATG", "M").replace("ACA", "T").replace("ACC", "T").replace("ACG", "T").replace("ACT", "T").replace("AAC", "N").replace("AAT", "N").replace("AAA", "K").replace("AAG", "K").replace("AGC", "S").replace("AGT", "S").replace("AGA", "R").replace("AGG", "R").replace('CTA', 'L').replace('CTC', 'L').replace('CTG', 'L').replace('CTT','L').replace('CCA','P').replace('CCC','P').replace('CCG','P').replace('CCT','P').replace('CAC','H').replace('CAT','H').replace('CAA','Q').replace('CAG','Q').replace('CGA','R').replace('CGC','R').replace('CGG','R').replace('CGT','R').replace('GTA','V').replace('GTC','V').replace('GTG','V').replace('GTT','V').replace('GCA','A').replace('GCC','A').replace('GCG','A').replace('GCT','A').replace('GAC','D').replace('GAT','D').replace('GAA','E').replace('GAG','E').replace('GGA','G').replace('GGC','G').replace('GGG','G').replace('GGT','G').replace('TCA','S').replace('TCC','S').replace('TCG','S').replace('TCT','S').replace('TTC','F').replace('TTT','F').replace('TTA','L').replace('TTG','L').replace('TAC','Y').replace('TAT','Y').replace('TAA','_').replace('TAG','_').replace('TGC','C').replace('TGT','C').replace('TGA','_').replace('TGG','W')
+    if "B" in sequence:
+        print("Your sequence contains letters that don't correspond to amoniacids. Please enter you sequence correctly.\n")
+        main()
+    elif "J" in sequence:
+        print("Your sequence contains letters that don't correspond to amoniacids. Please enter you sequence correctly.\n")
+        main()    
+    elif "O" in sequence:
+        print("Your sequence contains letters that don't correspond to amoniacids. Please enter you sequence correctly.\n")
+        main()
+    elif "U" in sequence:
+        print("Your sequence contains letters that don't correspond to amoniacids. Please enter you sequence correctly.\n")
+        main()
+    elif "X" in sequence:
+        print("Your sequence contains letters that don't correspond to amoniacids. Please enter you sequence correctly.\n")
+        main()
+    elif "Z" in sequence:
+        print("Your sequence contains letters that don't correspond to amoniacids. Please enter you sequence correctly.\n")
+        main()
+
+    else:
+        protein = sequence.replace("ATA", "I").replace("ATC", "I").replace("ATT", "I").replace("ATG", "M").replace("ACA", "T").replace("ACC", "T").replace("ACG", "T").replace("ACT", "T").replace("AAC", "N").replace("AAT", "N").replace("AAA", "K").replace("AAG", "K").replace("AGC", "S").replace("AGT", "S").replace("AGA", "R").replace("AGG", "R").replace('CTA', 'L').replace('CTC', 'L').replace('CTG', 'L').replace('CTT','L').replace('CCA','P').replace('CCC','P').replace('CCG','P').replace('CCT','P').replace('CAC','H').replace('CAT','H').replace('CAA','Q').replace('CAG','Q').replace('CGA','R').replace('CGC','R').replace('CGG','R').replace('CGT','R').replace('GTA','V').replace('GTC','V').replace('GTG','V').replace('GTT','V').replace('GCA','A').replace('GCC','A').replace('GCG','A').replace('GCT','A').replace('GAC','D').replace('GAT','D').replace('GAA','E').replace('GAG','E').replace('GGA','G').replace('GGC','G').replace('GGG','G').replace('GGT','G').replace('TCA','S').replace('TCC','S').replace('TCG','S').replace('TCT','S').replace('TTC','F').replace('TTT','F').replace('TTA','L').replace('TTG','L').replace('TAC','Y').replace('TAT','Y').replace('TAA','_').replace('TAG','_').replace('TGC','C').replace('TGT','C').replace('TGA','_').replace('TGG','W')
  
-    print("Your ORF was translated.")
-    DOMAIN_finder(protein)
-    return protein
+        print("Your ORF was translated.")
+        DOMAIN_finder(protein)
+        return protein
 
 
 #B, J, O, U, X, Z don't correspond to aminiacids but may be inserted in the sequence by typing mistake
